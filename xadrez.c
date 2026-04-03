@@ -1,32 +1,41 @@
 #include <stdio.h>
-
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-
-    return 0;
+ 
+void recursiva(int rainha){
+   if (rainha > 0){
+       printf("Esquerda\n");  //codigo imprimir
+       recursiva(rainha - 1); //chamada da recursiva
+   }
 }
+int main() {
+//Rainha 
+    int rainha = 8;
+    recursiva(rainha);
+//chamada da recursiva
+    int i;
+    int j;
+    int movimentoCompleto = 1;
+
+// Bispo (5 vezes)
+for (i = 1; i <= 5; i++)
+{
+   printf("Bispo, diagonal\n");
+}
+
+// Torre (5 vezes)         
+i = 1;
+    while (i <= 5) {
+        printf("Torre, frente %d\n", i);
+        i++;
+    }
+// cavalo (frente2 e direita 1)   
+     for (i = 1; i <= 2; i++)
+     {
+        for (j = 1; j <= 1; j++)
+       printf("cavalo ,frente\n");
+     }
+      printf("Cavalo ,direita\n");
+
+
+  return 0;
+}
+
